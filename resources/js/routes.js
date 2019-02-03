@@ -6,6 +6,7 @@ import TestComponent from './components/TestComponent.vue';
 import ProductCreateComponent from './components/ProductCreateComponent.vue';
 import PostIndexCom from './components/PostIndexCom.vue';
 import PostCreateCom from "./components/PostCreateCom.vue";
+import PostEditCom from "./components/PostEditCom.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
 		path: "/posts/create",
 		name: "posts-create",
 		component: PostCreateCom
+	},
+	{
+		path: "/posts/edit",
+		name: "posts-edit",
+		component: PostEditCom
 	}
 ];
 

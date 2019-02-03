@@ -21,6 +21,8 @@
 							<td>{{ post.id }}</td>
 							<td>{{ post.title }}</td>
 							<td>{{ post.category_id }}</td>
+							<td><router-link to = "/posts/edit" class ="btn btn-success">Edit</router-link></td>
+							<td><button class="btn btn-danger" @click.prevent = "DeletePost()">Delete</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -43,6 +45,11 @@
         mounted() {
             axios.get("api/posts")
             .then(response => this.posts = response.data)
+        },
+        methods: {
+        	DeletePost : function() {
+        		
+        	}
         }
     }
 
